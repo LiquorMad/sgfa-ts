@@ -1,13 +1,8 @@
 import React from 'react';
 import { 
   Container,
-  Header,
   Content, 
-  Title, 
-  WaitingTimeText, 
-  HeaderRow, 
   ProgressBarRow,
-  DestinyText,
   ProgressBarContainer,
   ProgressBarText,
   ProgressBarMatricula,
@@ -20,15 +15,11 @@ import {
   Row,
   ActionContainer,
   ActionIcon,
-  Footer,
-  FooterText,
-  FooterIcon
 } from './styles';
 import {FlatList} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
+import Header from '../../components/Header';
 const DATA = [
   {"vez":"1","matricula":"ST-01-AA","hora":"12:20"},
   {"vez":"2","matricula":"ST-02-AA","hora":"12:22"},
@@ -43,7 +34,7 @@ export interface IFilaIn {
   matricula: string,
   hora: string,
 }
-export function Home() {
+export function FilaIn() {
   const Item = ({data}: {data: IFilaIn}) =>(
     <Row >
       <Cell vez={data.vez}>{data.vez}</Cell>
@@ -52,15 +43,11 @@ export function Home() {
       <Cell><Ionicons name='trash' size={25}style={{color:'red'}}/></Cell>
     </Row>
   )
-  
     return (
       <Container >
-        <Header >
-          <Title>SISTEMA DE GESTÃO DE FILA DE AUTOMOVIES</Title>
-          <HeaderRow></HeaderRow>
-          <WaitingTimeText>Tempo médio de espera é de: 7 mins</WaitingTimeText>
-          <DestinyText>Fundura</DestinyText>
-        </Header>
+      <Header 
+        waitingTimeText="O Tempo de espera e de, 7 mins" 
+        Destiny="Fundura"/>
         <ProgressBarContainer>
           <ProgressBarRow/>
           <ProgressBarCarIcon>
@@ -110,12 +97,6 @@ export function Home() {
             />
           </Table>
         </Content>
-        <Footer>
-        <FooterText>2022 © LEONILDO BORGES MONIZ</FooterText>
-        <FooterIcon>
-          <FontAwesome5 name='user' size={25}style={{color:'#062F40'}}/>
-        </FooterIcon>
-        </Footer>
       </Container>
     );
     

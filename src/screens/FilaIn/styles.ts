@@ -5,7 +5,7 @@ export const Container = styled.View`
     width: 100%;
     margin: 0 auto
 `;
-export const Header = styled.View`
+export const HeaderView = styled.View`
     height: 189px;
     justify-content: center;
     background-color: ${({ theme }:any) => theme.COLORS.PRIMARY };
@@ -155,7 +155,7 @@ export const HeaderTable = styled.View`
     margin-horizontal:25px;
 `;
 //Footer 
-export const Footer = styled.View`
+export const FooterView = styled.View`
     margin-top: 1px;
     flex-direction: row;
     justify-content: space-between;
