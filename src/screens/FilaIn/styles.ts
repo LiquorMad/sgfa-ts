@@ -5,6 +5,12 @@ export const Container = styled.View`
     width: 100%;
     margin: 0 auto
 `;
+export const ToggleTitle = styled.View`
+    flex: 1;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 30px;
+`;
 export const HeaderView = styled.View`
     height: 189px;
     justify-content: center;
@@ -44,12 +50,11 @@ export const ProgressBarText = styled.Text`
     font-size: 16px;
 `;
 export const Title = styled.Text`
-    flex: 1;
-    margin-top: 30px;
-    margin-bottom: 30px;
     color:white;
-    font-size: 16px;
-    text-align:center;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 4px;
+    margin-left: -10px;
 `;
 
 export const HeaderRow = styled.View`

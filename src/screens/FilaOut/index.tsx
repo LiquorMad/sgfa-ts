@@ -47,10 +47,10 @@ export function FilaOut() {
   )
     return (
       <Container>
-      
-      <Header 
-        waitingTimeText="Fila de saída" 
-        Destiny="Fundura"/>
+        <Header 
+          waitingTimeText="Fila de saída" 
+          Destiny="Fundura"
+        />
         <Space>
         </Space>
         <Content>
