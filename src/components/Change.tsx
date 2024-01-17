@@ -6,10 +6,10 @@ import { SelectList } from 'react-native-dropdown-select-list';
 export function Change() {
   const [data,setData] = useState([]);
   useEffect(() => {
-    getPlayers();
+    getRoutes();
   }, []);
 
-  const getPlayers = () => { 
+  const getRoutes = () => { 
     const URL = 'http://192.168.1.6:3333/api/players';
     axios.get(URL)
     .then((response) =>{
@@ -31,11 +31,11 @@ export function Change() {
 
     return (
       <View style={styles.container}>
-        <Text>Hello Change FilaIn!</Text>
+        <Text>Change Route</Text>
         <SelectList 
           setSelected={setSelected} 
           data={data} 
-          onSelect={() => alert(selected)} 
+          onSelect={handleUserRegister}
         />
       <Button
         title="Cadastrar"

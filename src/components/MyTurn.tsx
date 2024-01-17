@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { SelectList } from 'react-native-dropdown-select-list';
 
-export function CreateFilaIn() {
+export function MyTurn() {
   const [data,setData] = useState([]);
   useEffect(() => {
-    getCars();
+    getCarsOnFila();
   }, []);
 
-  const getCars = () => { 
+  const getCarsOnFila = () => { 
     const URL = 'http://192.168.1.6:3333/api/players';
     axios.get(URL)
     .then((response) =>{
@@ -31,7 +31,7 @@ export function CreateFilaIn() {
 
     return (
       <View style={styles.container}>
-        <Text>Create FilaIn</Text>
+        <Text>My Turn</Text>
         <SelectList 
           setSelected={setSelected} 
           data={data} 

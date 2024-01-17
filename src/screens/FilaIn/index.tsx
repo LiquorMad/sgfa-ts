@@ -22,7 +22,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../../components/Header';
 import { CreateFilaIn } from "../../components/CreateFilaIn";
-import { Time } from "../../components/Time";
+import { MyTurn } from "../../components/MyTurn";
 import { Change } from "../../components/Change";
 
 
@@ -118,7 +118,7 @@ export function FilaIn() {
           <Button title="Hide modal" onPress={toggleModalChange} />
         </Modal>
         <Modal isVisible={isModalVisibleTime}>
-          <Time />
+          <MyTurn />
           <Button title="Hide modal" onPress={toggleModalTime} />
         </Modal>
       </ProgressBarMatricula>
