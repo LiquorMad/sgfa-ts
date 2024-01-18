@@ -1,1 +1,1 @@
-Aplicação Mobile - Sistema de Gestão de Fila de Automoveis
+<h1 align="center"> Sistema de Gestão de Links (Mobile Frontend) </h1>
