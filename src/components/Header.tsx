@@ -5,9 +5,11 @@ import {
   HeaderView, 
   Title, 
   ToggleTitle, 
-  WaitingTimeText 
+  WaitingTimeText,
 } from '../screens/FilaIn/styles';
 import { DrawerToggleButton } from '@react-navigation/drawer';
+import { View } from 'react-native';
+import { Space } from '../screens/FilaOut/styles';
 
 type HeaderProps = {
     waitingTimeText: string;
@@ -22,8 +24,11 @@ const Header = (props: HeaderProps,navigation:any) => {
         <Title> SISTEMA DE GESTÃO DE FILA DE AUTOMÓVIES </Title>
       </ToggleTitle>
       <HeaderRow></HeaderRow>
-      <WaitingTimeText>{props.waitingTimeText}</WaitingTimeText>
-      <DestinyText>{props.Destiny}</DestinyText>
+      <View>
+        <WaitingTimeText>{props.waitingTimeText}</WaitingTimeText>
+        <DestinyText>{props.Destiny}</DestinyText>
+      </View>
+      <Space></Space>
     </HeaderView>
   )
 }

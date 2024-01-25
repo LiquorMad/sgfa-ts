@@ -1,30 +1,42 @@
+
 import styled from 'styled-components/native';
 
+export const Space = styled.View`
+    background-color: ${({ theme }:any) => theme.COLORS.BACKGROUND_PROGRESSBAR };
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 45px;
+`;
+//From FilaIn
+
 export const Container = styled.View`
-    flex:1;
+    flex:1; 
     width: 100%;
     margin: 0 auto
 `;
-//Header element
 export const ToggleTitle = styled.View`
+    flex: 1;
     flex-direction: row;
     margin-top: 30px;
     margin-bottom: 30px;
 `;
 export const HeaderView = styled.View`
-    height: auto;
+    height: 189px;
     justify-content: center;
     background-color: ${({ theme }:any) => theme.COLORS.PRIMARY };
 `;
 export const ProgressBarContainer = styled.View`
     background-color: ${({ theme }:any) => theme.COLORS.BACKGROUND_PROGRESSBAR };
+    margin-top: -45px;
+    padding-bottom: 15px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 `;
 
 export const ProgressBarMatricula = styled.View`
     flex-direction: row !important;
-    justify-content: space-around !important;
+    justify-content: flex-start !important;
+    margin-left: 35px;
 `;
 export const ProgressBarCarIcon = styled.View`
     flex-direction: row;
@@ -56,7 +68,8 @@ export const Title = styled.Text`
 `;
 
 export const HeaderRow = styled.View`
-    margin-top: -30px;
+    flex: 1;
+    margin-top: -40px;
     border-bottom-width: 1px;
     border-color: white;
     border-style: solid;
@@ -72,20 +85,22 @@ export const ProgressBarRow = styled.View`
     margin-left: 3%;
 `;
 export const WaitingTimeText = styled.Text`
-    padding-top: 15px;
+    flex: 2;
+    padding-top: 10px;
     color:white;
     text-align: center;
 `;
 export const DestinyText = styled.Text`
+    flex: 3;
     color:white;
     text-align: left;
     margin-left:3%;
-    margin-bottom: 10px;
 `;
 //Actions
 export const ActionContainer = styled.View`
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    margin-left: 55px;
 `;
 export const ActionWrap = styled.View`
     margin-top: 15px;
@@ -112,11 +127,14 @@ export const ActionIcon = styled.View`
 
 //Table costumizing
 export const Content = styled.View`
+    flex: 1;
 `;
 export const HeadingTable = styled.Text`
+    flex: 1;
     font-weight: bold;
 `;
 export const TopBarTable = styled.View`
+    flex: 1;
 `;
 export const Row = styled.View`
     margin-right: -85px;

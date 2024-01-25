@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import { 
   Container,
   Content, 
+  ProgressBarText,
+  ProgressBarMatricula,
   HeadingTable,
   Table,
   HeaderTable,
   Cell,
   Row,
-} from '../FilaIn/styles';
-import Modal from "react-native-modal";
-import {FlatList} from 'react-native';
+  ActionContainer,
+  ActionIcon,
+} from './styles';
+import {Button, FlatList} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../../components/Header';
-import { Space } from './styles';
-import { ActionContainer, ActionIcon, ProgressBarMatricula, ProgressBarText } from '../Punicao/styles';
-import { CreateFilaIn } from '../../components/CreateFilaIn';
-import { Button } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
+import Modal from "react-native-modal";
+import { CreateFilaIn } from '../../components/CreateFilaIn';
 const DATA = [
   {"vez":"1","matricula":"ST-01-AA","hora":"12:20"},
   {"vez":"2","matricula":"ST-02-AA","hora":"12:22"},
@@ -32,7 +32,8 @@ export interface IFilaIn {
   matricula: string,
   hora: string,
 }
-export function FilaOut() {
+export function Punicao() {
+
   const [isModalVisibleCreate, setModalVisibleCreate] = useState(false);
 
   const toggleModalCreate = () => {
@@ -50,11 +51,9 @@ export function FilaOut() {
     return (
       <Container>
         <Header 
-          waitingTimeText="Fila de saída" 
-          Destiny="Fundura"
-        />
-        <Space></Space>
-        <ActionContainer>
+          waitingTimeText="Lista das punições" 
+          Destiny=""/>
+      <ActionContainer>
         <ActionIcon >
           <AntDesign onPress={toggleModalCreate} name='addfile' size={25}style={{color:'white'}}/>
         </ActionIcon>
@@ -68,9 +67,9 @@ export function FilaOut() {
       </ProgressBarMatricula>
         <Content>
           <HeaderTable>
-            <HeadingTable>Vez</HeadingTable> 
             <HeadingTable>Matricula</HeadingTable> 
-            <HeadingTable>Hora</HeadingTable> 
+            <HeadingTable>Inicio</HeadingTable> 
+            <HeadingTable>Fim</HeadingTable> 
           </HeaderTable>
           <Table >
             <FlatList
@@ -82,4 +81,5 @@ export function FilaOut() {
         </Content>
       </Container>
     );
+    
 }

@@ -8,6 +8,8 @@ interface Props {
 export const Container = styled.View`
   flex-direction: row;
   margin-bottom: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 export const IconContainer = styled.View<Props>`
@@ -17,23 +19,22 @@ export const IconContainer = styled.View<Props>`
   align-items: center;
   margin-right: 2px;
   background-color: #FFFFFF;
-
+  border-bottom-width: 1px;
+  border-bottom-color: #AEAEB3;   
+${({ isFocused }:any) => isFocused && css`
+      border-bottom-color: ${({ theme }:any) => theme.COLORS.PRIMARY};
   
-  ${({ isFocused }) => isFocused && css`
-    border-bottom-width: 2px;
-    border-bottom-color: #DC1637;   
   `};
 `;
-
 
 export const InputText = styled(TextInput) <Props>`
   flex: 1;
   background-color: #FFFFFF;
   color: #7A7A80;
   padding: 0 23px;
-
-  ${({ isFocused }) => isFocused && css`
-    border-bottom-width: 2px;
-    border-bottom-color: #DC1637;    
+  border-bottom-width: 1px;
+  border-bottom-color: #AEAEB3;   
+  ${({ isFocused }:any) => isFocused && css`
+      border-bottom-color: ${({ theme }:any) => theme.COLORS.PRIMARY};
   `};
 `;

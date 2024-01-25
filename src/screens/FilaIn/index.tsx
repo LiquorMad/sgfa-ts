@@ -17,13 +17,14 @@ import {
   ActionContainer,
   ActionIcon,
 } from './styles';
-import {Button, FlatList, Text, View} from 'react-native';
+import {Button, FlatList} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../../components/Header';
 import { CreateFilaIn } from "../../components/CreateFilaIn";
 import { MyTurn } from "../../components/MyTurn";
 import { Change } from "../../components/Change";
+import { Space } from "../FilaOut/styles";
 
 
 const DATA = [
@@ -60,8 +61,6 @@ export function FilaIn() {
     setModalVisibleTime(!isModalVisibleTime);
   };
 
-
-
   const Item = ({data}: {data: IFilaIn}) =>(
     <Row>
       <Cell vez={data.vez}>{data.vez}</Cell>
@@ -72,9 +71,11 @@ export function FilaIn() {
   )
   return (
     <Container >
-    <Header 
-      waitingTimeText="O Tempo de espera e de, 7 mins" 
-      Destiny="Fundura"/>
+      <Header 
+        waitingTimeText="O Tempo de espera e de, 7 mins" 
+        Destiny="Fundura"
+      />
+      <Space></Space>
       <ProgressBarContainer>
         <ProgressBarRow/>
         <ProgressBarCarIcon>
@@ -128,7 +129,7 @@ export function FilaIn() {
           <HeadingTable>Matricula</HeadingTable> 
           <HeadingTable>Hora</HeadingTable> 
         </HeaderTable>
-        <Table style={{flex: 1}}>
+        <Table>
           <FlatList
             data={DATA}
             renderItem={({item}) => <Item data={item}/>}
