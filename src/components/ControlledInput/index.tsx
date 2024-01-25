@@ -12,15 +12,15 @@ export function ControlledInput({control,error, name,...rest}: Props){
     return (
         <>
             <Controller
-            name={name}
-            control={control}
-            render={({field:{onChange, value}}) => (
-                <Input
-                    onChangeText={onChange}
-                    value={value}
-                    {...rest}
-                />
-            )}
+                name={name}
+                control={control}
+                render={({field:{onChange, value}}) => (
+                    <Input
+                        onChangeText={onChange}
+                        value={value}
+                        {...rest}
+                    />
+                )}
             />
             {
                 error && <Error>{error.message}</Error>
